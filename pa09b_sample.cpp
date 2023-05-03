@@ -4,7 +4,7 @@
 /// @brief pa09b Partial sample solution
 /// @note This program is a sample program that produces a Mandelbrot image and
 /// and is to be used as a basis for the pa09b assignment.
-
+/// Added 5/3/23
 #include <iostream>
 #include <fstream>
 #include <cmath>
