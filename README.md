@@ -47,6 +47,7 @@ Clone the Git repository to your local machine using the command:
 
 ```
 
-git clone user@server_ip_address:/path/to/myrepo.git
+$ git clone git@github.com:Computer-Science-135/Collab_assignment.git
+
 ```
 Replace user with your username, server_ip_address with the IP address of your server, and /path/to/myrepo.git with the path to your Git repository on the server.
