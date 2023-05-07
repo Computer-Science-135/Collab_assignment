@@ -1,6 +1,7 @@
 /// Mandelbrot color gradient file import function
 /// How can this be improved?
 /// Take a look at the for loop
+/// A suggested change has been added
 void read_gradient_file(image_t& image, const string COLOR_FILE){
 
         // Get the number of triplets in the file. This is the first value
