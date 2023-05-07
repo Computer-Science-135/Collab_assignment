@@ -63,5 +63,3 @@ Checkout the branch you want to work on by running the following command:
 ```
 git checkout <branch-name>
 ```
-
-
