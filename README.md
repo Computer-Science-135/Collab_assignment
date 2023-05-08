@@ -1,5 +1,3 @@
-# Collab_assignment
-CS-135 Collaborative Assignment 
 # Git install and setup in the Bellagio Server
 
 
@@ -28,38 +26,97 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 Make sure to replace your_email@example.com with your email address used for your Git account.
 
-Copy the public key to the remote server by running:
+Copy the public key to the remote server by the following steps:
 
-```
-ssh-copy-id user@server_ip_address
-```
+1. Look for the public key in your repo.git repository.
+2. Cat this file and copy it into the clipboard. 
+3. Go to gitHub, your account settings and the `SSH and GPG` tab. Select `New SSH key` and paste your public key there.
+
+Retrun to your remote repository and run the ssh agent to register your private key.You will need to do the following 2 steps everytime you start a new session on the bellagio server.
+
 Start the ssh-agent by running the following command:
 ```
 eval $(ssh-agent -s)
 ```
 Add your private key to the ssh-agent by running the following command:
+
 ```
 ssh-add /path/to/private/key
-
-Replace user with your username and server_ip_address with the IP address of your server.
-
+```
+This should log you into the remote server without requiring a password. 
 
 Clone the Git repository to your local machine using the command:
 
 ```
-$ git clone git@github.com:Computer-Science-135/Collab_assignment.git
+git clone git@github.com:Computer-Science-135/Collab_assignment.git
 ```
-cd to the new cloned repository
+This will add all of the files in the github master branch into your local repository.
+
+---
+
+You will need to create a local branch to work from and this will then appear in gitub when you push your files there for review.
+
+Create a new branch in your Git repository, you can use the following command:
 ```
-Fetch the latest changes from the GitHub repository by running the following command:
+git branch new-branch-name
 ```
-git fetch
+Switch to the new branch you just created, you can use the following command:
 ```
-List all the available branches by running the following command:
+git checkout new-branch-name // Do not add "/origin" to this
 ```
-git branch -a
+
+Run the following command to see a list of all the branches in your local Git repository:
 ```
-Checkout the branch you want to work on by running the following command:
+git branch
 ```
-git checkout <branch-name>
+
+
+To see the remote branches in your Git account, run the following command:
+```
+git branch -r
+```
+
+Change to this new directory and this will be your working area. 
+
+
+Make sure you have the latest changes from the remote GitHub branch. You can do this by running the command 
+```
+git pull origin branch-name.
+```
+
+If you want to commit only one file in your Git branch, you can use the following command:
+
+```
+git add file-name
+```
+
+If you want to see a summary of the changes that have been added, you can use the following command instead:
+```
+git status
+```
+To send your code changes from your local Git branch to a GitHub branch, you can follow these steps:
+
+Make sure you have committed all your changes to your local Git branch using the command:
+
+```   
+git commit -m "Commit message".
+```
+Push your changes to the remote GitHub branch using the command 
+```
+git push origin branch-name 
+(replace branch-name with the name of the
+GitHub branch you want to push to).
+```
+You can use the git log and git diff commands to see the changes made to files in a repository. --follow, folows across renames.
+
+
+```
+git log --follow file-name
+```
+
+
+
+The git diff command shows the differences between two commits or two branches. To see the changes made to a specific file, you can use the following command:
+```
+git diff  file-name
 ```
