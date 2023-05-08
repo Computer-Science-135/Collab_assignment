@@ -1,5 +1,5 @@
 /// @file code-segment-1.cpp
-/// @author
+/// @author James Pristas
 /// @date
 /// @brief
 /// @note Read in the file and find the easter egg and print it out.
