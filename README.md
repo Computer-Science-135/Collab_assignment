@@ -111,8 +111,6 @@ git branch
 ```
 
 
-
-
 If you want to commit only one file in your Git branch, you can use the following command:
 
 ```
@@ -149,6 +147,10 @@ git merge origin/master
 Alternatively, you can combine steps 2 and 3 by running a git pull command:
 ```
 git pull origin master
+```
+To delete a local branch in Git, use the following command:
+```
+git branch -d branch_name
 ```
 To delete a branch in the remote repository, you can use the following command:
 
