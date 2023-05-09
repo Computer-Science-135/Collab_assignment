@@ -138,3 +138,20 @@ You can use the command to see your current branch, the tracking branch, and the
 ```
 git branch -vv 
 ```
+Fetch the changes from the remote master branch:
+```
+git fetch origin master
+```
+Merge the changes from the remote master branch into your local master branch:
+```
+git merge origin/master
+```
+Alternatively, you can combine steps 2 and 3 by running a git pull command:
+```
+git pull origin master
+```
+To delete a branch in the remote repository, you can use the following command:
+
+```
+git push origin --delete <branch_name>
+```
