@@ -19,4 +19,8 @@ if you like.
 
 I will merge the final code into the master when it is agreed by all.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 96d5a740bf3d8072852c47b495b343132fa298b1
 Hope you do well...
