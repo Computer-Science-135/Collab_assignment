@@ -134,4 +134,7 @@ The git diff command shows the differences between two commits or two branches. 
 ```
 git diff  file-name
 ```
-
+You can use the command to see your current branch, the tracking branch, and the status of each branch.
+```
+git branch -vv 
+```
