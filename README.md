@@ -157,3 +157,7 @@ To delete a branch in the remote repository, you can use the following command:
 ```
 git push origin --delete <branch_name>
 ```
+Reset your local master branch to match the remote master branch using the git reset command:
+```
+git reset --hard origin/master
+```

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ac59815d57f949ce14cb0c4ab6295afea3691607
 /// @file  code_extra.cpp
 /// @author  Alan Oliva
 /// @date    05/14/2023
@@ -9,6 +12,7 @@
 ///          create and concatenate the found character to
 ///          reveal the message.
 /// @note    10 minutes
+<<<<<<< HEAD
 =======
 /// @file code_extra.cpp
 /// @author Rixen Usam
@@ -16,6 +20,8 @@
 /// @brief Takes a message from a file and sifts through
 /// it to find the hidden message
 >>>>>>> afb07145dc0adbb7dd587275647822af81e62619
+=======
+>>>>>>> ac59815d57f949ce14cb0c4ab6295afea3691607
 /// @note Read in the file and find the the word EXTRA
 
 
@@ -38,14 +44,20 @@ int main()
     int i = 0;  // The counter for the loop
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ac59815d57f949ce14cb0c4ab6295afea3691607
  // Declare Variables //
 
     char c;      // Reads each character of file
     string msg;  // Holds the Result of Message
+<<<<<<< HEAD
 =======
     // Open the hidden text file
     ifstream infile;
     infile.open("hidden.txt");
+=======
+>>>>>>> ac59815d57f949ce14cb0c4ab6295afea3691607
 
     // While loop to reach end of the file
     while (!infile.eof())
@@ -64,6 +76,24 @@ int main()
     infile.close();
 
 <<<<<<< HEAD
+       // Create File Stream //
+    ifstream infile;
+    infile.open("hidden.txt");
+
+       // Loop each character found in the file
+       // and if it is not a number, it will create
+       // the message in a string one by one character.
+    while (!infile.eof()) {
+        infile >> c;
+        if (isdigit(c) != 0) {
+            msg += c;
+        }
+    }
+    infile.close();
+
+       // Display Message
+    cout << endl << msg << endl << endl;
+
        // Create File Stream //
     ifstream infile;
     infile.open("hidden.txt");
