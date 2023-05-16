@@ -14,6 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <iomanip>
 
 int main() {
     // Open the file containing hexadecimal numbers for reading
@@ -45,7 +46,7 @@ int main() {
             ss >> decimalNumber;
 
             // Write the decimal number to the output file
-            outputFile << decimalNumber << " ";
+            outputFile << std::setw(4) << std::setfill(' ') << decimalNumber;
         }
 
         outputFile << std::endl;
