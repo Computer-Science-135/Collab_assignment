@@ -3,7 +3,7 @@
 /// @date May 15, 2023
 /// @note I pledge my word of honor that I have abided by the
 /// CSN Academic Integrity Policy while completing this assignment.
-/// @brief the 
+/// @brief the program converts hex to decimal 
 ///
 /// @note People who helped me: Natalia Smorodinova
 
@@ -22,27 +22,33 @@ int main() {
     // Open a new file for writing the converted decimal numbers
     std::ofstream outputFile("dec_table.txt");
 
-
     // String to store each hexadecimal number
     std::string hexNumber;
 
     // Read each line from the input file
     while (getline(inputFile, hexNumber)) {
+        std::istringstream iss(hexNumber);
 
-        // Variable to store the converted decimal number
-        unsigned long decimalNumber = 0;
+        // Read each hexadecimal number from the line
+        while (iss >> hexNumber) {
 
-        // Create a stringstream for the conversion
-        std::stringstream ss;
+            // Variable to store the converted decimal number
+            unsigned long decimalNumber = 0;
 
-        // Input the hexadecimal number into the stringstream
-        ss << std::hex << hexNumber;
+            // Create a stringstream for the conversion
+            std::stringstream ss;
 
-        // Extract the converted decimal number from the stringstream
-        ss >> decimalNumber;
+            // Input the hexadecimal number into the stringstream
+            ss << std::hex << hexNumber;
 
-        // Write the decimal number to the output file
-        outputFile << decimalNumber << std::endl;
+            // Extract the converted decimal number from the stringstream
+            ss >> decimalNumber;
+
+            // Write the decimal number to the output file
+            outputFile << decimalNumber << " ";
+        }
+
+        outputFile << std::endl;
     }
 
     // Close the input and output files after the conversion
